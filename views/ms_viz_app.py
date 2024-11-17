@@ -29,7 +29,7 @@ def upload_file():
     return None
 
 # Function to compute the outer subtraction of Mass and its self
-def compute_mass_diff(df, arg1=100, arg2=1000):
+def compute_mass_diff(df, arg1=280, arg2=400):
     mass_values = df['Mass'].values
     mass_diff = np.subtract.outer(mass_values, mass_values)
     
