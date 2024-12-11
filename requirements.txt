@@ -3,6 +3,5 @@ numpy
 plotly
 openpyxl
 networkx
-math
 st_link_analysis
 
