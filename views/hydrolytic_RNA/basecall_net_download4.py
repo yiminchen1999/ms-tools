@@ -125,8 +125,8 @@ def run_process(df, mass_cutoff, time_diff_cutoff, mass_table, similarity_cutoff
 
 def main():
     st.title("Generation of MassDiff Network")
-    mass_table = {"C": 305.04129, "U": 306.0253,  "A": 329.05252, "G": 345.04743} 
-    common_mod = {"D": 308.04095, "mA":343.06817, "mC":319.05694, "mG":359.06308, "mU":320.04095} # , "m22G":373.0787, "CxAA":1044.11, "ACxU":1021.09}
+    mass_table = {"C": 305.04129, "U": 306.0253,  "A": 329.05252, "G": 345.04743, "D": 308.04095} 
+    common_mod = {"mA":343.06817, "mC":319.05694, "mG":359.06308, "mU":320.04095} # , "m22G":373.0787, "CxAA":1044.11, "ACxU":1021.09}
     df = upload_file()
     if df is not None:
         st.sidebar.header("Filter Options")
