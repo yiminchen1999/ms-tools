@@ -51,7 +51,7 @@ input_sequences = st.text_area("Type or paste the input sequences (one per line)
 input_sequences = [line.strip() for line in input_sequences.split("\n") if line.strip()]
 
 if st.button("Submit"):
-    if not input_string:
+    if not input_sequences:
         st.error("Please enter a string.")
     else:
         res = []
