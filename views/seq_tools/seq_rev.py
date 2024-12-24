@@ -63,8 +63,8 @@ if st.button("Submit"):
                 reversed_tokens = [match_table[token] for token in reversed(tokens)]
                 output_string = "".join(reversed_tokens)
                 res.append(output_string)
-            st.success("Reversed String:")
-            df = pd.DataFrame(res, columns=["Sequence"])
-            st.write(df)
+        st.success("Reversed String:")
+        df = pd.DataFrame(res, columns=["Sequence"])
+        st.write(df)
 
 
