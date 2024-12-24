@@ -155,6 +155,7 @@ def main():
             try:
                 # Process files and extract data
                 extracted_df, annotations_3d = process_files(df, df_nets)
+                st.write(extracted_df)
 
                 # Create plots
                 col1, col2, col3 = st.columns(3)
