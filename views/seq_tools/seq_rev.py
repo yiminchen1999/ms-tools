@@ -46,19 +46,25 @@ else:
 st.sidebar.write("Using default match table:", match_table)
 
 st.header("Input String")
-input_string = st.text_area("Enter a string to reverse based on the match table:")
+#input_string = st.text_area("Enter a string to reverse based on the match table:")
+input_sequences = st.text_area("Type or paste the input sequences (one per line)", height=70)
+input_sequences = [line.strip() for line in input_sequences.split("\n") if line.strip()]
 
 if st.button("Submit"):
     if not input_string:
         st.error("Please enter a string.")
     else:
-        tokens = tokenize_input(input_string, match_table)
-        if "".join(tokens) != input_string:
-            st.error("The input string contains characters not in the match table.")
-        else:
-            reversed_tokens = [match_table[token] for token in reversed(tokens)]
-            output_string = "".join(reversed_tokens)
+        res = []
+        for input_string in input_sequences:
+            tokens = tokenize_input(input_string, match_table)
+            if "".join(tokens) != input_string:
+                st.error("The input string contains characters not in the match table.")
+            else:
+                reversed_tokens = [match_table[token] for token in reversed(tokens)]
+                output_string = "".join(reversed_tokens)
+                res.append(output_string)
             st.success("Reversed String:")
-            st.write(output_string)
+            df = pd.DataFrame(res, columns=["Sequence"])
+            st.write(df)
 
 
