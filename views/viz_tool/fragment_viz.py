@@ -139,8 +139,9 @@ def main():
                 return
 
             # Create "NodeName" column
-            df["NodeName"] = "M_" + df["Monoisotopic Mass"].astype(int).astype(str)
-
+#            df["NodeName"] = "M_" + df["Monoisotopic Mass"].astype(int).astype(str)
+            df['temp1'] = round(df["Monoisotopic Mass"],2).astype(str) 
+            df["NodeName"] = "M_" + df['temp1'] 
             # Read the second file into a DataFrame
             if file2.name.endswith("xlsx"):
                 df_nets = pd.read_excel(file2)
