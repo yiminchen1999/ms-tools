@@ -4,4 +4,4 @@ plotly
 openpyxl
 networkx
 st_link_analysis
-
+xlsxwriter
