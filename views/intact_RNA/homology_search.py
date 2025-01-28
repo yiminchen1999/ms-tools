@@ -45,11 +45,11 @@ def generate_network(filtered_df, mass_table, similarity_cutoff):
     dict0 = dict(mass_intensity.values) 
     masses = sorted(masses) 
     for i in range(len(masses)):
-        m1 = int(masses[i]) 
+        m1 = round(masses[i], 2) 
         for j in range(i + 1, len(masses)):
             mass_diff = abs(masses[j] - masses[i]) 
             for key, value in mass_table.items():
-                m2 = int(masses[j])
+                m2 =  round(masses[j], 2)
                 if abs(mass_diff - value) < similarity_cutoff:
                     ppm0 =  round((abs(mass_diff - value) / min(m1, m2)) * 1000000, 2)
                     G.add_node(f"M_{m1}")
