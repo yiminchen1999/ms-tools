@@ -1,5 +1,5 @@
-import streamlit as st
 
+import streamlit as st
 # --- PAGE SETUP ---
 about_page = st.Page(page  ='views/about_tools.py',title = "About tools", default = True)
 
@@ -15,10 +15,10 @@ frag_page = st.Page(page = "views/hydrolytic_RNA/st_link_app.py", title = "find 
 seq_aln_page = st.Page(page = "views/seq_tools/seq_aln.py", title = "align sequences")
 seq_rev_page = st.Page(page = "views/seq_tools/seq_rev.py", title = "reverse sequences")
 
-pg = st.navigation( 
-    { "Info":  [about_page], 
+pg = st.navigation(
+    { "Info":  [about_page],
       "Data Visualization": [viz_page, frag_viz_page],
-      "Tools for Intact RNA":[intact_page, homology_search], 
+      "Tools for Intact RNA":[intact_page, homology_search],
       "Tools for Hydrolytic RNA" :[net_page, frag_page],
       "Sequence Tools": [seq_aln_page, seq_rev_page],
 })
