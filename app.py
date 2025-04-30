@@ -24,8 +24,6 @@ for path in page_paths[section]:
     title = ' '.join(word.capitalize() for word in filename.split('_'))
     page_titles[title] = path
 
-selected_title = st.sidebar.selectbox("Choose a tool:", list(page_titles.keys()))
-selected_path = page_titles[selected_title]
 
 # Function to load and run a module from a file path
 def import_module_from_path(path):
