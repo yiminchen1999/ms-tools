@@ -5,3 +5,4 @@ openpyxl
 networkx
 st_link_analysis
 xlsxwriter
+streamlit>=1.35.0
