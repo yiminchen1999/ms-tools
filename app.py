@@ -1,7 +1,7 @@
 
 import streamlit as st
 # --- PAGE SETUP ---
-about_page = st.Page(page  ='views/about_tools.py',title = "About tools", default = True)
+about_page = st.Page(page  ='views/about_tools.py',title = "About tools")
 
 viz_page = st.Page(page = "views/viz_tool/ms_viz_tab.py",title = "MS data plots" )
 frag_viz_page= st.Page(page = "views/viz_tool/fragment_viz.py", title = "fragment plots" )
